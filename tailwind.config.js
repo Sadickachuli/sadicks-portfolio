@@ -9,7 +9,18 @@ export default {
       md: { max: "767px" },
       sm: { max: "639px" },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: "reg",
+        serif: "bold",
+        mono: "lig",
+        extra: "extra",
+      },
+      colors: {
+        primary: "#ceff74",
+        secondary: "#212328",
+      },
+    },
   },
   plugins: [],
 };

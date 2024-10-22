@@ -2,4 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "bold";
+  src: url("./assets/fonts/OldschoolGrotesk-NormalBold.otf");
+}
+@font-face {
+  font-family: "extra";
+  src: url("./assets/fonts/OldschoolGrotesk-NormalExtraBold.otf");
+}
+@font-face {
+  font-family: "reg";
+  src: url("./assets/fonts/OldschoolGrotesk-NormalRegular.otf");
+}
+@font-face {
+  font-family: "lig";
+  src: url("./assets/fonts/OldschoolGrotesk-NormalLight.otf");
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+.padd {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+@media (max-width: 767px) {
+  .padd {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (max-width: 579px) {
+  .padd {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}

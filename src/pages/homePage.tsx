@@ -1,8 +1,10 @@
+import HeroSection from "../components/homePage/hero";
+
 export default function HomePage() {
   return (
     <section>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
+      <HeroSection />
+      <div className="h-screen w-full bg-blue-500"></div>
     </section>
   );
 }

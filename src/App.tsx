@@ -12,15 +12,16 @@ import AboutPage from "./pages/about";
 import ProjectsPage from "./pages/projects";
 import ViewProject from "./pages/viewProject";
 import ContactPage from "./pages/contact";
+import Header from "./components/header";
 
 export default function App() {
   const route = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/">
+      <Route path="/" element={<Header />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
-        <Route path="project" element={<ProjectsPage />} />
-        <Route path="project/:id" element={<ViewProject />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="projects/:id" element={<ViewProject />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
