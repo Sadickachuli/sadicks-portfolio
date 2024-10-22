@@ -8,24 +8,20 @@ import {
 import { Toaster } from "react-hot-toast";
 import HomePage from "./pages/homePage";
 import NotFound from "./pages/notFound";
-import authLoader from "./loaders/authLoader";
-import ProfilePage from "./pages/profile";
-import LoginPage from "./pages/loginPage";
-import RegisterPage from "./pages/registerPage";
-import homeLoader from "./loaders/unAuthLoader";
+import AboutPage from "./pages/about";
+import ProjectsPage from "./pages/projects";
+import ViewProject from "./pages/viewProject";
+import ContactPage from "./pages/contact";
 
 export default function App() {
   const route = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/">
-        <Route loader={homeLoader}>
-          <Route index element={<HomePage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegisterPage />} />
-        </Route>
-        <Route loader={authLoader}>
-          <Route path="profile" element={<ProfilePage />} />
-        </Route>
+        <Route index element={<HomePage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="project" element={<ProjectsPage />} />
+        <Route path="project/:id" element={<ViewProject />} />
+        <Route path="contact" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )
