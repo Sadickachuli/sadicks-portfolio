@@ -24,20 +24,20 @@ html {
 }
 
 .padd {
-  padding-left: 7%;
-  padding-right: 7%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 @media (max-width: 767px) {
   .padd {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }
 
 @media (max-width: 579px) {
   .padd {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 }

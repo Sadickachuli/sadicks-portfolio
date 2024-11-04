@@ -1,3 +1,4 @@
+import Dot from "../dot";
 import Button from "../utils/button";
 
 export default function HeroSection() {
@@ -18,10 +19,18 @@ export default function HeroSection() {
               className="w-10 h-10 object-contain absolute right-0 -bottom-10"
               alt=""
             />
+            <img
+              src="/images/clip.png"
+              className="w-10 h-10 object-contain absolute left-0 -bottom-10 -rotate-90"
+              alt=""
+            />
           </div>
           <div className="h-full z-20">
             <div className="w-fit py-1 px-10 bg-black font-normal text-base relative rounded-br-3xl">
-              Holla! I am Aristide 👋
+              <div className="flex items-center">
+                <Dot />
+                <p>Holla! I am Aristide 👋</p>
+              </div>
               <img
                 src="/images/clip.png"
                 className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
