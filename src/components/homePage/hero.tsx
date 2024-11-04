@@ -2,73 +2,62 @@ import Button from "../utils/button";
 
 export default function HeroSection() {
   return (
-    <article className="w-full  h-[60vh] relative py-12 flex gap-10 items-center">
-      <Button text="Start a Project" onclick={() => {}} />
-      <Button text="Start a Project" onclick={() => {}} />
-      <Button text="Start a Project" onclick={() => {}} />
-      {/* <svg
-        height="100%"
-        width="100%"
-        viewBox="0 0 100 40"
-        className="bg-red-400"
-      >
-        <clipPath id="border">
-          <path
-            d="
-              M 7 5
-              L 85 5
-              A 2.5 2.5 0 0 0 87.5 2.5
-              A 2.5 2.5 0 0 1 90 0
-              L 97.5 0
-              A 2.5 2.5 0 0 1 100 2.5
-              L 100 25
-              A 2.5 2.5 0 0 1 97.5 27.5
-              L 80 27.5
-              A 2.5 2.5 0 0 0 77.5 30
-              L 77.5 35
-              A 2.5 2.5 0 0 1 75 37.5
-              L 10 37.5
-              A 2.5 2.5 0 0 1 7.5 35
-              L 7.5 20
-              A 2.5 2.5 0 0 0 5 17.5
-              L 2.5 17.5
-              A 2.5 2.5 0 0 1 0 15
-              L 0 7.5
-              A 2.5 2.5 0 0 1 2.5 5
-            "
-          ></path>
-        </clipPath>
-      </svg> */}
-      {/* <video
+    <article className="w-full h-[70vh] padd py-10 relative">
+      <video
         src="/hero.mp4"
-        className="bg-blue-400 w-full h-full object-cover"
-        style={{ clipPath: "url(#border)" }}
         autoPlay
         loop
         muted
+        className="w-full h-full object-cover rounded-3xl bg-white"
       />
-
-      <div className="absolute bottom-10 right-[9%] h-[23%] w-[18%] rounded-[35px] grid place-content-center font-bold font-serif text-4xl">
-        ShelfSwap
-      </div> */}
-      {/* <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsum
-        et, modi, non aperiam, distinctio esse suscipit magni accusamus
-        recusandae dolores. Ex impedit aspernatur velit sit ut cum accusantium
-        autem.
-      </p>
-      <p className="font-bold text-3xl">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsum
-        et, modi, non aperiam, distinctio esse suscipit magni accusamus
-        recusandae dolores. Ex impedit aspernatur velit sit ut cum accusantium
-        autem.
-      </p>
-      <p className="text-3xl">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsum
-        et, modi, non aperiam, distinctio esse suscipit magni accusamus
-        recusandae dolores. Ex impedit aspernatur velit sit ut cum accusantium
-        autem.
-      </p> */}
+      <article className="padd w-full absolute top-10 left-0 h-1/2">
+        <section className="h-full w-full rounded-3xl flex">
+          <div className="bg-black h-1/4 w-1/6 relative md:hidden">
+            <img
+              src="/images/clip.png"
+              className="w-10 h-10 object-contain absolute right-0 -bottom-10"
+              alt=""
+            />
+          </div>
+          <div className="h-full z-20">
+            <div className="w-fit py-1 px-10 bg-black font-normal text-base relative rounded-br-3xl">
+              Holla! I am Aristide 👋
+              <img
+                src="/images/clip.png"
+                className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
+                alt=""
+              />
+              <p className="w-fit py-2 bg-black font-bold text-5xl md:text-4xl sm:text-2xl whitespace-nowrap">
+                A Software Developer and
+              </p>
+            </div>
+            <div className="w-fit py-2 px-10 bg-black font-bold text-5xl md:text-4xl sm:text-2xl relative rounded-br-3xl">
+              UI/UX Web Design
+              <img
+                src="/images/clip.png"
+                className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
+                alt=""
+              />
+            </div>
+            <div className="w-fit py-2 px-10 bg-black font-bold text-5xl md:text-4xl sm:text-2xl rounded-br-3xl relative">
+              Based in Kigali
+              <img
+                src="/images/clip.png"
+                className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
+                alt=""
+              />
+            </div>
+            <div className="text-base w-fit bg-black px-8 py-3 rounded-bl-3xl rounded-br-3xl relative">
+              <Button text="View My works" onclick={() => {}} />
+              <img
+                src="/images/clip.png"
+                className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+      </article>
     </article>
   );
 }
