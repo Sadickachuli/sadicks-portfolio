@@ -1,5 +1,6 @@
 import AboutSection from "../components/homePage/aboutSection";
 import HeroSection from "../components/homePage/hero";
+import ProjectsSection from "../components/homePage/projects";
 import SkillsSection from "../components/homePage/skills";
 
 export default function HomePage() {
@@ -8,6 +9,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <ProjectsSection />
       <div className="h-screen" />
     </section>
   );

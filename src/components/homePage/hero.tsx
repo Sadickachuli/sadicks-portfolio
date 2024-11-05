@@ -1,9 +1,26 @@
+import { useGSAP } from "@gsap/react";
 import Dot from "../dot";
 import Button from "../utils/button";
+import { useRef } from "react";
+import gsap from "gsap";
 
 export default function HeroSection() {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const ref5 = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(ref1.current, { y: "-100%", duration: 1, opacity: 0 });
+    gsap.from(ref2.current, { x: -100, duration: 1, opacity: 0 });
+    gsap.from(ref3.current, { x: -100, duration: 1, opacity: 0 });
+    gsap.from(ref4.current, { x: -100, duration: 1, opacity: 0 });
+    gsap.from(ref5.current, { y: "100%", duration: 1, opacity: 0 });
+  }, []);
+
   return (
-    <article className="w-full h-[70vh] padd py-10 relative">
+    <article className="w-full h-[75vh] padd py-10 relative">
       <video
         src="/hero.mp4"
         autoPlay
@@ -27,7 +44,7 @@ export default function HeroSection() {
           </div>
           <div className="h-full z-20">
             <div className="w-fit py-1 px-10 bg-black font-normal text-base relative rounded-br-3xl">
-              <div className="flex items-center">
+              <div ref={ref1} className="flex items-center">
                 <Dot />
                 <p>Holla! I am Aristide 👋</p>
               </div>
@@ -36,12 +53,15 @@ export default function HeroSection() {
                 className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
                 alt=""
               />
-              <p className="w-fit py-2 bg-black font-bold text-5xl md:text-4xl sm:text-2xl whitespace-nowrap">
+              <p
+                ref={ref2}
+                className="w-fit py-2 bg-black font-bold text-5xl md:text-4xl sm:text-2xl whitespace-nowrap"
+              >
                 A Software Developer and
               </p>
             </div>
             <div className="w-fit py-2 px-10 bg-black font-bold text-5xl md:text-4xl sm:text-2xl relative rounded-br-3xl">
-              UI/UX Web Design
+              <p ref={ref3}>UI/UX Web Design</p>
               <img
                 src="/images/clip.png"
                 className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
@@ -49,7 +69,7 @@ export default function HeroSection() {
               />
             </div>
             <div className="w-fit py-2 px-10 bg-black font-bold text-5xl md:text-4xl sm:text-2xl rounded-br-3xl relative">
-              Based in Kigali
+              <p ref={ref4}>Based in Kigali</p>
               <img
                 src="/images/clip.png"
                 className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
@@ -57,7 +77,9 @@ export default function HeroSection() {
               />
             </div>
             <div className="text-base w-fit bg-black px-8 py-3 rounded-bl-3xl rounded-br-3xl relative">
-              <Button text="View My works" onclick={() => {}} />
+              <div ref={ref5}>
+                <Button text="View My works" onclick={() => {}} />
+              </div>
               <img
                 src="/images/clip.png"
                 className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"

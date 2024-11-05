@@ -41,3 +41,19 @@ html {
     padding-right: 3%;
   }
 }
+.paddr {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media (max-width: 767px) {
+  .paddr {
+    padding-left: 6%;
+  }
+}
+
+@media (max-width: 579px) {
+  .paddr {
+    padding-left: 3%;
+  }
+}
