@@ -23,8 +23,8 @@ export default function ProjectsSection() {
       },
     });
 
-    tl.to(roller.current, { width: "100%", duration: 1 }, 0);
-    tl.to(slider.current, { x: "-60%", duration: 1 }, 0);
+    tl.to(roller.current, { width: "100%", duration: 4 }, 0);
+    tl.to(slider.current, { x: "-60%", duration: 4 }, 0);
   }, []);
 
   return (
@@ -79,7 +79,7 @@ function ProjectCard({ isHalf = false }: { isHalf?: boolean }) {
     >
       <img
         src="/images/test.jpg"
-        className="w-full h-4/6 object-cover group-hover:scale-[104%] rounded-3xl transition-all duration-300"
+        className="w-full h-5/6 object-cover group-hover:scale-[104%] rounded-3xl transition-all duration-300"
         alt=""
       />
       <section>
