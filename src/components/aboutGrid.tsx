@@ -14,13 +14,13 @@ export default function AboutGrid() {
   return (
     <article className="padd columns-3 md:columns-2 sm:columns-1">
       <One />
+      <Three />
+      <Eight />
       <Two />
       <Four />
-      <Three />
-      <Five />
       <Six />
+      <Five />
       <Seven />
-      <Eight />
       <Nine />
     </article>
   );

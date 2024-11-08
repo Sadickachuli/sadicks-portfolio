@@ -12,11 +12,11 @@ export default function HeroSection() {
   const ref5 = useRef(null);
 
   useGSAP(() => {
-    gsap.from(ref1.current, { y: "-100%", duration: 1, opacity: 0 });
-    gsap.from(ref2.current, { x: -100, duration: 1, opacity: 0 });
-    gsap.from(ref3.current, { x: -100, duration: 1, opacity: 0 });
-    gsap.from(ref4.current, { x: -100, duration: 1, opacity: 0 });
-    gsap.from(ref5.current, { y: "100%", duration: 1, opacity: 0 });
+    gsap.from(ref1.current, { y: "-100%", duration: 2, opacity: 0 });
+    gsap.from(ref2.current, { x: -100, duration: 2, opacity: 0 });
+    gsap.from(ref3.current, { x: -100, duration: 2, opacity: 0 });
+    gsap.from(ref4.current, { x: -100, duration: 2, opacity: 0 });
+    gsap.from(ref5.current, { y: "100%", duration: 2, opacity: 0 });
   }, []);
 
   return (

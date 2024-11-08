@@ -30,6 +30,8 @@ export default function Header() {
     tl.to(headerRef.current, {
       background: "#212328",
       borderRadius: 50,
+      paddingRight: "5%",
+      paddingLeft: "5%",
       width: "60%",
       duration: 2,
     });
