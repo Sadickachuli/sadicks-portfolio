@@ -1,0 +1,8 @@
+TODO: 
+          Remove services from the header
+          remove about me section from the hte home page
+          create contact page 
+          add click functionalities on project card
+          create contact section below projects on homepage
+
+          Create SupaBase Projects and add all projects...
