@@ -52,7 +52,6 @@ export default function Header() {
         <section className="font-mono flex gap-5 items-center md:hidden">
           <HeaderElement name="Home" link="/" />
           <HeaderElement name="About" link="/about" />
-          <HeaderElement name="Services" isAnchor link="#services" />
           <HeaderElement name="Projects" link="/projects" banner={6} />
           <HeaderElement name="Contact" link="/contact" />
         </section>

@@ -1,8 +1,6 @@
 TODO: 
-          Remove services from the header
-          remove about me section from the hte home page
-          create contact page 
+          remove about me section from the hte home page => to be thought about.
+          create contact page => contact section not done from https://www.igorkozlowski.net/
           add click functionalities on project card
           create contact section below projects on homepage
-
           Create SupaBase Projects and add all projects...
