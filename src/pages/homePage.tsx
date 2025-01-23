@@ -1,4 +1,3 @@
-import AboutGrid from "../components/aboutGrid";
 import AboutSection from "../components/homePage/aboutSection";
 import ContactSection from "../components/homePage/contactSection";
 import ExpertiseSection from "../components/homePage/expertise";
@@ -11,7 +10,6 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-      <AboutGrid />
       <ExpertiseSection />
       <ContactSection />
     </article>

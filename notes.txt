@@ -4,3 +4,5 @@ TODO:
           add click functionalities on project card
           create contact section below projects on homepage
           Create SupaBase Projects and add all projects...
+
+          Change Font => they are downloaded
