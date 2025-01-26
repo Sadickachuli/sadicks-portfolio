@@ -86,7 +86,7 @@ function ProjectCard({ isHalf = false }: { isHalf?: boolean }) {
         <div className="flex items-center gap-3">
           <p>2024</p>
           <Dot />
-          <p>Aristide Isingizwe</p>
+          <p>Sadick</p>
         </div>
         <p className="font-bold font-serif text-3xl">
           Refreshing Gary Neville's digital presence

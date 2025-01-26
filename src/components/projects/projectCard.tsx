@@ -12,8 +12,8 @@ export default function ProjectCard({ isText }: { isText?: boolean }) {
           AI
         </p>
         <div>
-          <p>Aristide Isingizwe</p>
-          <p>Aristide Isingizwe</p>
+          <p>Sadick</p>
+          <p>Sadick</p>
         </div>
       </div>
     </section>
@@ -28,7 +28,7 @@ export default function ProjectCard({ isText }: { isText?: boolean }) {
         <div className="flex items-center gap-3">
           <p>2024</p>
           <Dot />
-          <p>Aristide Isingizwe</p>
+          <p>Sadick</p>
         </div>
         <p className="font-bold font-serif text-3xl">
           Refreshing Gary Neville's digital presence

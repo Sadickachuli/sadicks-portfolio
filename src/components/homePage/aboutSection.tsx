@@ -33,10 +33,7 @@ export default function AboutSection() {
       </section>
       <section ref={rightRef} className="w-2/3 md:w-full flex flex-col gap-4 ">
         <p className="font-bold text-4xl md:text-3xl sm:text-sxl">
-          <span className="w-12 h-4s padd"></span> A passionate software
-          developer from Rwanda, specializing in Machine Learning with expertise
-          in full-stack development, mobile apps, and design. I combine
-          creativity and technical skill to build solutions that make an impact.
+          <span className="w-12 h-4s padd"></span> Software Engineer passionate about leveraging the transformative potential of technology to solve real-world problems. Currently specializing in Machine Learning and Artificial Intelligence, with strong expertise in software development and a commitment to creating innovative, impactful solutions.
         </p>
         <div className="flex gap-5 items-center ">
           <Button text="About Me" onclick={() => {}} />

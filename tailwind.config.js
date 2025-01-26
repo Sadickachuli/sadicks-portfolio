@@ -17,7 +17,7 @@ export default {
         extra: "extra",
       },
       colors: {
-        primary: "#ceff74",
+        primary: '#1E90FF',
         secondary: "#212328",
         third: "#09160f",
       },

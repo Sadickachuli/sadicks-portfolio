@@ -46,7 +46,7 @@ export default function HeroSection() {
             <div className="w-fit py-1 px-10 bg-black font-normal text-base relative rounded-br-3xl">
               <div ref={ref1} className="flex items-center">
                 <Dot />
-                <p>Holla! I am Aristide 👋</p>
+                <p>Hello! I Am Sadick</p>
               </div>
               <img
                 src="/images/clip.png"
@@ -57,11 +57,11 @@ export default function HeroSection() {
                 ref={ref2}
                 className="w-fit py-2 bg-black font-bold text-5xl md:text-4xl sm:text-2xl whitespace-nowrap"
               >
-                A Software Developer and
+                A Machine Learning/AI engineer and
               </p>
             </div>
             <div className="w-fit py-2 px-10 bg-black font-bold text-5xl md:text-4xl sm:text-2xl relative rounded-br-3xl">
-              <p ref={ref3}>UI/UX Web Design</p>
+              <p ref={ref3}>Software Developer</p>
               <img
                 src="/images/clip.png"
                 className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"
@@ -69,7 +69,7 @@ export default function HeroSection() {
               />
             </div>
             <div className="w-fit py-2 px-10 bg-black font-bold text-5xl md:text-4xl sm:text-2xl rounded-br-3xl relative">
-              <p ref={ref4}>Based in Kigali</p>
+              <p ref={ref4}>4+ yrs experience</p>
               <img
                 src="/images/clip.png"
                 className="w-7 h-7 object-contain absolute -right-7 -rotate-90 top-0"

@@ -6,7 +6,7 @@ export default function Logo() {
   return (
     <button onClick={() => navigate("/")} className="cursor-pointer">
       <h1 className="font-serif text-3xl md:text-2xl sm:text-xl">
-        Aristide<span className="text-primary"> .</span>
+        Sadick<span className="text-primary"> .</span>
       </h1>
     </button>
   );

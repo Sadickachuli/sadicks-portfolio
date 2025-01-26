@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 export default function ContactSection() {
   const [email, setEmail] = useState("");
   return (
@@ -17,15 +16,26 @@ export default function ContactSection() {
             <SwipeLinkButton to="/test" text="SomeWhere" />
           </div>
           <div className="flex flex-col gap-5">
-            <SwipeLinkButton to="/projects" text="LinkedIn" />
-            <SwipeLinkButton to="/about" text="Twitter" />
-            <SwipeLinkButton to="/contact" text="Instagram" />
-            <SwipeLinkButton to="/test" text="Codewars" />
+            <SwipeLinkButton
+              to="https://www.linkedin.com/in/sadick-achuli-81955b249/"
+              text="LinkedIn"
+              external
+            />
+            <SwipeLinkButton
+              to="https://x.com/Sadh_ick"
+              text="Twitter"
+              external
+            />
+            <SwipeLinkButton
+              to="https://www.instagram.com/sadh_ick/"
+              text="Instagram"
+              external
+            />
           </div>
         </aside>
         <section className="flex flex-col gap-6">
           <p className="font-bold text-4xl">
-            Leave an email andd i'll get back to you ...
+            Leave an email and I'll get back to you ...
           </p>
           <form className="flex-1 p-1 rounded-full border border-primary flex items-center">
             <input
@@ -52,7 +62,7 @@ export default function ContactSection() {
             Cookies and privacy
           </p>
         </div>
-        <p>Copyright&copy;2025.AristideIsingizwe.AllRightsReserved</p>
+        <p>Copyright &copy; 2025. Sadick - All Rights Reserved</p>
       </section>
     </article>
   );
@@ -61,10 +71,22 @@ export default function ContactSection() {
 type LinkButtonProps = {
   to: string;
   text: string;
+  external?: boolean; // Add an optional prop to indicate external links
 };
 
-export function SwipeLinkButton({ to, text }: LinkButtonProps) {
-  return (
+export function SwipeLinkButton({ to, text, external }: LinkButtonProps) {
+  return external ? (
+    <a href={to} target="_blank" rel="noopener noreferrer">
+      <div className="relative group overflow-hidden text-3xl font-sans">
+        <p className="group-hover:bottom-full group-hover:-translate-y-full transition-all duration-200">
+          {text}
+        </p>
+        <p className="text-primary absolute top-full left-0 group-hover:-translate-y-full transition-all duration-200">
+          {text}
+        </p>
+      </div>
+    </a>
+  ) : (
     <Link to={to}>
       <div className="relative group overflow-hidden text-3xl font-sans">
         <p className="group-hover:bottom-full group-hover:-translate-y-full transition-all duration-200">
