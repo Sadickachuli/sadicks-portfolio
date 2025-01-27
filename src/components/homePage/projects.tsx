@@ -72,7 +72,7 @@ export default function ProjectsSection() {
             imageSrc="/images/projects/expc.png"
             year="2020"
             author="Sadick"
-            title="AI App To Classify Waste"
+            title="Website To Connect And Explore Ghana"
           />
           <ProjectCard
             githubLink="https://github.com/Sadickachuli/Mujera.git"
