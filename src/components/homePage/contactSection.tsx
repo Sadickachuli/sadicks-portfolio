@@ -13,7 +13,6 @@ export default function ContactSection() {
             <SwipeLinkButton to="/projects" text="Works" />
             <SwipeLinkButton to="/about" text="About" />
             <SwipeLinkButton to="/contact" text="Contact" />
-            <SwipeLinkButton to="/test" text="SomeWhere" />
           </div>
           <div className="flex flex-col gap-5">
             <SwipeLinkButton
