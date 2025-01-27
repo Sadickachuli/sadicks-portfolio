@@ -52,7 +52,8 @@ export default function Header() {
         <section className="font-mono flex gap-5 items-center md:hidden">
           <HeaderElement name="Home" link="/" />
           <HeaderElement name="About" link="/about" />
-          <HeaderElement name="Projects" link="/projects" banner={6} />
+          <HeaderElement name="Main Projects" link="/projects-section" />
+          <HeaderElement name="Other Projects" link="/projects" banner={7} />          
           <HeaderElement name="Contact" link="/contact" />
         </section>
         <Button text="Start a Project" onclick={() => navigate("/contact")} />

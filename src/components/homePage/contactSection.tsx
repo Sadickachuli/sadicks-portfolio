@@ -33,25 +33,6 @@ export default function ContactSection() {
             />
           </div>
         </aside>
-        <section className="flex flex-col gap-6">
-          <p className="font-bold text-4xl">
-            Leave an email and I'll get back to you ...
-          </p>
-          <form className="flex-1 p-1 rounded-full border border-primary flex items-center">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              className="p-4 px-6 w-full bg-transparent text-lg outline-none"
-            />
-            <button className="bg-primary text-black py-4 px-10 rounded-full">
-              Submit
-            </button>
-          </form>
-        </section>
       </section>
       <section className="flex justify-between text-gray-500 pt-12 border-t border-primary/30">
         <div className="relative group overflow-hidden">
