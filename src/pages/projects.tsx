@@ -8,11 +8,11 @@ export default function ProjectsPage() {
         imageSrc="/images/projects/login.png"
         year="2023"
         author="Sadick"
-        title="Sus-tracker Web App"
+        title="Sustainability Web App"
         isHalf
       />
       <ProjectCard 
-        githubLink="https://github.com/Sadickachuli/bounce-ball-clone.git"
+        githubLink="https://bounce-ball-clone.vercel.app/"
         imageSrc="/images/projects/bounce.png"
         year="2022"
         author="Sadick"
