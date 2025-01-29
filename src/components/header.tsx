@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router";
+import { Outlet } from "react-router";
 import Logo from "./utils/logo";
 import Button from "./utils/button";
 import { NavLink } from "react-router-dom";
@@ -10,8 +10,6 @@ import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Header() {
-  const navigate = useNavigate();
-
   const trigger = useRef(null);
   const headerRef = useRef(null);
 
@@ -53,10 +51,16 @@ export default function Header() {
           <HeaderElement name="Home" link="/" />
           <HeaderElement name="About" link="/about" />
           <HeaderElement name="Main Projects" link="/projects-section" />
-          <HeaderElement name="Other Projects" link="/projects" banner={7} />          
+          <HeaderElement name="Other Projects" link="/projects" banner={7} />
           <HeaderElement name="Contact" link="/contact" />
         </section>
-        <Button text="Start a Project" onclick={() => navigate("/contact")} />
+        {/* Updated Button to open GitHub in a new tab */}
+        <Button
+          text="Start a Project"
+          onclick={() =>
+            window.open("https://github.com/Sadickachuli", "_blank")
+          }
+        />
       </section>
       <section>
         <Outlet />

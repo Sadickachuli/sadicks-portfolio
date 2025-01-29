@@ -3,6 +3,7 @@ import Dot from "../dot";
 import Button from "../utils/button";
 import { useRef } from "react";
 import gsap from "gsap";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 export default function HeroSection() {
   const ref1 = useRef(null);
@@ -10,6 +11,7 @@ export default function HeroSection() {
   const ref3 = useRef(null);
   const ref4 = useRef(null);
   const ref5 = useRef(null);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useGSAP(() => {
     gsap.from(ref1.current, { y: "-100%", duration: 2, opacity: 0 });
@@ -78,7 +80,8 @@ export default function HeroSection() {
             </div>
             <div className="text-base w-fit bg-black px-8 py-3 rounded-bl-3xl rounded-br-3xl relative">
               <div ref={ref5}>
-                <Button text="View My works" onclick={() => {}} />
+                {/* Route to /project-section */}
+                <Button text="View My works" onclick={() => navigate("/projects-section")} />
               </div>
               <img
                 src="/images/clip.png"
