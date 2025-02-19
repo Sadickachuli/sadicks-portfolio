@@ -56,9 +56,9 @@ export default function Header() {
         </section>
         {/* Updated Button to open GitHub in a new tab */}
         <Button
-          text="Start a Project"
+          text="Blog Posts"
           onclick={() =>
-            window.open("https://github.com/Sadickachuli", "_blank")
+            window.open("https://medium.com/@m.achuli", "_blank")
           }
         />
       </section>
