@@ -11,6 +11,14 @@ export default function ProjectsPage() {
         title="Sustainability Web App"
         isHalf
       />
+
+<ProjectCard 
+        githubLink="https://climate-cbot.streamlit.app/"
+        imageSrc="/images/projects/cbot.png"
+        year="2022"
+        author="Sadick"
+        title="AI Chatbot For Climate Change"
+      />
       <ProjectCard 
         githubLink="https://bounce-ball-clone.vercel.app/"
         imageSrc="/images/projects/bounce.png"
@@ -18,12 +26,22 @@ export default function ProjectsPage() {
         author="Sadick"
         title="A Nostalgic Nokia Game"
       />
+      
+
       <ProjectCard 
         githubLink="https://github.com/Sadickachuli/BarkBuddies.git"
         imageSrc="/images/projects/dog.png"
         year="2022"
         author="Sadick"
         title="Tinder For Dogs"
+      />
+
+<ProjectCard 
+        githubLink="https://www.youtube.com/watch?v=yuXxs_8pC1c"
+        imageSrc="/images/projects/htaiapp.png"
+        year="2024"
+        author="Sadick"
+        title="An AI Mobile App For Your Health"
       />
       <ProjectCard 
         githubLink="https://github.com/Sadickachuli/MoveIn.git"
@@ -33,13 +51,7 @@ export default function ProjectsPage() {
         title="Moving Made Easier"
       />
       
-      <ProjectCard 
-        githubLink="https://www.youtube.com/watch?v=yuXxs_8pC1c"
-        imageSrc="/images/projects/htaiapp.png"
-        year="2024"
-        author="Sadick"
-        title="An AI Mobile App For Your Health"
-      />
+      
       <ProjectCard 
         githubLink="https://github.com/Sadickachuli/artefact-doc-website"
         imageSrc="/images/projects/kuza.png"
@@ -54,7 +66,8 @@ export default function ProjectsPage() {
         author="Sadick"
         title="A Website To Sell Shea Butter Products"
       />
-      
+
+
       {/* Add more ProjectCard components as necessary */}
     </article>
   );
