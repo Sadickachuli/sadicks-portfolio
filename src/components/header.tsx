@@ -51,7 +51,7 @@ export default function Header() {
           <HeaderElement name="Home" link="/" />
           <HeaderElement name="About" link="/about" />
           <HeaderElement name="Main Projects" link="/projects-section" />
-          <HeaderElement name="Other Projects" link="/projects" banner={7} />
+          <HeaderElement name="Other Projects" link="/projects" banner={9} />
           <HeaderElement name="Contact" link="/contact" />
         </section>
         {/* Updated Button to open GitHub in a new tab */}

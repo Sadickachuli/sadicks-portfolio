@@ -75,11 +75,11 @@ export default function ProjectsSection() {
             title="Website To Connect And Explore Ghana"
           />
           <ProjectCard
-            githubLink="https://github.com/Sadickachuli/Mujera.git"
-            imageSrc="/images/projects/mujeera.png"
+            githubLink="https://github.com/Sadickachuli/Automated-Grant-Impact-Analysis.git"
+            imageSrc="/images/projects/grantAI.png"
             year="2024"
             author="Sadick"
-            title="A Website For Mujera Finance"
+            title="An AI Webapp To Analyze Grant Reports"
           />
             
         </div>

@@ -28,12 +28,20 @@ export default function ProjectsPage() {
       />
       
 
-      <ProjectCard 
+<ProjectCard 
         githubLink="https://github.com/Sadickachuli/BarkBuddies.git"
         imageSrc="/images/projects/dog.png"
         year="2022"
         author="Sadick"
         title="Tinder For Dogs"
+      />
+
+<ProjectCard 
+        githubLink="https://github.com/Sadickachuli/MoveIn.git"
+        imageSrc="/images/projects/move.png"
+        year="2021"
+        author="Sadick"
+        title="Moving Made Easier"
       />
 
 <ProjectCard 
@@ -43,15 +51,23 @@ export default function ProjectsPage() {
         author="Sadick"
         title="An AI Mobile App For Your Health"
       />
-      <ProjectCard 
-        githubLink="https://github.com/Sadickachuli/MoveIn.git"
-        imageSrc="/images/projects/move.png"
-        year="2021"
+      
+      <ProjectCard
+            githubLink="https://github.com/Sadickachuli/Mujera.git"
+            imageSrc="/images/projects/mujeera.png"
+            year="2024"
+            author="Sadick"
+            title="A Website For Mujera Finance"
+          />
+
+<ProjectCard 
+        githubLink="https://github.com/Sadickachuli/Eco-Sheane.git"
+        imageSrc="/images/projects/eco.png"
+        year="2022"
         author="Sadick"
-        title="Moving Made Easier"
+        title="A Website To Sell Shea Butter Products"
       />
-      
-      
+    
       <ProjectCard 
         githubLink="https://github.com/Sadickachuli/artefact-doc-website"
         imageSrc="/images/projects/kuza.png"
@@ -59,13 +75,7 @@ export default function ProjectsPage() {
         author="Sadick"
         title="A Website To Amplify Women's Voices"
       />
-      <ProjectCard 
-        githubLink="https://github.com/Sadickachuli/Eco-Sheane.git"
-        imageSrc="/images/projects/eco.png"
-        year="2022"
-        author="Sadick"
-        title="A Website To Sell Shea Butter Products"
-      />
+      
 
 
       {/* Add more ProjectCard components as necessary */}
