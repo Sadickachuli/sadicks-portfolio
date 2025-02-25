@@ -14,7 +14,7 @@ export default function ProjectsPage() {
 
 <ProjectCard 
         githubLink="https://climate-cbot.streamlit.app/"
-        imageSrc="/images/projects/cbot.png"
+        imageSrc="/images/projects/cbot2.png"
         year="2022"
         author="Sadick"
         title="AI Chatbot For Climate Change"
