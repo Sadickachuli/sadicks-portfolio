@@ -46,7 +46,7 @@ export default function ProjectsPage() {
 
 <ProjectCard 
         githubLink="https://www.youtube.com/watch?v=yuXxs_8pC1c"
-        imageSrc="/images/projects/htaiapp.png"
+        imageSrc="/images/projects/htai.png"
         year="2024"
         author="Sadick"
         title="An AI Mobile App For Your Health"
