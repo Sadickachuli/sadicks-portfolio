@@ -13,7 +13,8 @@ import ProjectsPage from "./pages/projects";
 import ViewProject from "./pages/viewProject";
 import ContactPage from "./pages/contact";
 import Header from "./components/header";
-import ProjectsSection from "./components/homePage/projects";  // Import ProjectsSection
+import ProjectsSection from "./components/homePage/projects"; 
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const route = createBrowserRouter(
@@ -29,10 +30,12 @@ export default function App() {
       </Route>
     )
   );
+
   return (
     <article>
       <RouterProvider router={route} />
       <Toaster position="top-center" reverseOrder={false} />
+      <Analytics /> 
     </article>
   );
 }
