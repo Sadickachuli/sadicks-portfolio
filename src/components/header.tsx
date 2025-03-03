@@ -44,35 +44,43 @@ export default function Header() {
     <article>
       <div className="h-2 z-0" ref={trigger} />
       <section
-        className="padd py-8 flex justify-between items-center mx-auto relative"
+        className="padd py-8 flex items-center mx-auto relative"
         ref={headerRef}
       >
         <Logo />
-        
-        {/* Full Navigation: Visible on small & medium screens */}
-        <section className="flex lg:hidden font-mono gap-5 items-center">
-          <HeaderElement name="Home" link="/" />
-          <HeaderElement name="About" link="/about" />
-          <HeaderElement name="Main Projects" link="/projects-section" />
-          <HeaderElement name="Other Projects" link="/projects" banner={9} />
-          <HeaderElement name="Contact" link="/contact" />
-          <Button
-            text="Blog Posts"
-            onclick={() =>
-              window.open("https://medium.com/@m.achuli", "_blank")
-            }
-          />
-        </section>
-        
-        {/* Hamburger Menu: Visible only on large screens */}
-        <div className="hidden lg:block">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-3xl focus:outline-none"
-          >
-            ☰
-          </button>
+        {/* Mobile/Medium Navigation: Visible on small & medium screens */}
+        <div className="relative flex-grow lg:hidden">
+          {/* Centered navigation links */}
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="flex gap-5 items-center">
+              <HeaderElement name="Home" link="/" />
+              <HeaderElement name="About" link="/about" />
+              <HeaderElement name="Main Projects" link="/projects-section" />
+              <HeaderElement name="Other Projects" link="/projects" banner={9} />
+              <HeaderElement name="Contact" link="/contact" />
+            </div>
+          </div>
+          {/* Blog Posts button anchored to the right */}
+          <div className="absolute inset-y-0 right-0 flex items-center">
+            <Button
+              text="Blog Posts"
+              onclick={() =>
+                window.open("https://medium.com/@m.achuli", "_blank")
+              }
+            />
+          </div>
         </div>
+
+
+        {/* Hamburger Menu: Visible only on large screens */}
+<div className="hidden lg:block ml-auto">
+  <button
+    onClick={() => setMenuOpen(!menuOpen)}
+    className="text-3xl focus:outline-none"
+  >
+    ☰
+  </button>
+</div>
       </section>
 
       {/* Desktop Overlay Menu (triggered by Hamburger) */}
@@ -125,9 +133,7 @@ function HeaderElement({ name, link, isAnchor, banner, onClick }: HeaderElementP
       to={link}
       onClick={onClick}
       className={({ isActive }) =>
-        `flex items-center gap-5 ${
-          isActive ? "text-primary font-serif" : ""
-        } relative`
+        `flex items-center gap-5 ${isActive ? "text-primary font-serif" : ""} relative`
       }
     >
       <p>{name}</p>
