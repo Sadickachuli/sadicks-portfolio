@@ -46,7 +46,7 @@ export default function ProjectsSection() {
             title="An Optimised Website For Stone House Group"
           />
           <ProjectCard
-            githubLink="https://github.com/Sadickachuli/Homyz.git"
+            githubLink="https://homyz-sadicks-projects.vercel.app/"
             imageSrc="/images/projects/middle.png"
             year="2023"
             author="Sadick"
