@@ -33,7 +33,7 @@ export default function HeroSection() {
       />
       {/* Static image for mobile devices */}
       <img
-        src="/heroimg.png" 
+        src="/hero2.jpeg" 
         alt="Hero section"
         className="w-full h-full object-cover rounded-3xl bg-white hidden md:block"
       />
@@ -65,7 +65,7 @@ export default function HeroSection() {
               />
               <p
                 ref={ref2}
-                className="w-full py-2 bg-black font-bold text-5xl sm:text-2xl md:whitespace-nowrap"
+                className="w-full py-2 bg-black font-bold text-5xl sm:text-xl md:whitespace-nowrap"
               >
                 A Machine Learning/AI engineer,
               </p>
