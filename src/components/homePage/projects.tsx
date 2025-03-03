@@ -54,7 +54,7 @@ export default function ProjectsSection() {
             isHalf
           />
           <ProjectCard
-            githubLink="https://github.com/Sadickachuli/fashion-aura-website.git"
+            githubLink="https://fashion-aura-website.vercel.app/"
             imageSrc="/images/projects/fashion.png"
             year="2022"
             author="Sadick"
