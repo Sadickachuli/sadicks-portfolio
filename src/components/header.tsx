@@ -1,17 +1,18 @@
-import { Outlet } from "react-router";
+import { Outlet } from "react-router"; 
 import Logo from "./utils/logo";
 import Button from "./utils/button";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Header() {
   const trigger = useRef(null);
   const headerRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -43,25 +44,57 @@ export default function Header() {
     <article>
       <div className="h-2 z-0" ref={trigger} />
       <section
-        className="padd py-8 flex justify-between items-center mx-auto"
+        className="padd py-8 flex justify-between items-center mx-auto relative"
         ref={headerRef}
       >
         <Logo />
-        <section className="font-mono flex gap-5 items-center md:hidden">
+        
+        {/* Full Navigation: Visible on small & medium screens */}
+        <section className="flex lg:hidden font-mono gap-5 items-center">
           <HeaderElement name="Home" link="/" />
           <HeaderElement name="About" link="/about" />
           <HeaderElement name="Main Projects" link="/projects-section" />
           <HeaderElement name="Other Projects" link="/projects" banner={9} />
           <HeaderElement name="Contact" link="/contact" />
+          <Button
+            text="Blog Posts"
+            onclick={() =>
+              window.open("https://medium.com/@m.achuli", "_blank")
+            }
+          />
         </section>
-        {/* Updated Button to open GitHub in a new tab */}
-        <Button
-          text="Blog Posts"
-          onclick={() =>
-            window.open("https://medium.com/@m.achuli", "_blank")
-          }
-        />
+        
+        {/* Hamburger Menu: Visible only on large screens */}
+        <div className="hidden lg:block">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-3xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
       </section>
+
+      {/* Desktop Overlay Menu (triggered by Hamburger) */}
+      {menuOpen && (
+        <div className="hidden lg:block bg-gray-900 text-white p-4 absolute top-16 left-0 w-full z-50">
+          <div className="flex flex-col gap-4">
+            <HeaderElement name="Home" link="/" onClick={() => setMenuOpen(false)} />
+            <HeaderElement name="About" link="/about" onClick={() => setMenuOpen(false)} />
+            <HeaderElement name="Main Projects" link="/projects-section" onClick={() => setMenuOpen(false)} />
+            <HeaderElement name="Other Projects" link="/projects" banner={9} onClick={() => setMenuOpen(false)} />
+            <HeaderElement name="Contact" link="/contact" onClick={() => setMenuOpen(false)} />
+            <Button
+              text="Blog Posts"
+              onclick={() => {
+                window.open("https://medium.com/@m.achuli", "_blank");
+                setMenuOpen(false);
+              }}
+            />
+          </div>
+        </div>
+      )}
+
       <section>
         <Outlet />
       </section>
@@ -74,11 +107,12 @@ interface HeaderElementProps {
   link: string;
   isAnchor?: boolean;
   banner?: number;
+  onClick?: () => void;
 }
 
-function HeaderElement({ name, link, isAnchor, banner }: HeaderElementProps) {
+function HeaderElement({ name, link, isAnchor, banner, onClick }: HeaderElementProps) {
   return isAnchor ? (
-    <a href={link} className="flex items-center gap-5 relative">
+    <a href={link} onClick={onClick} className="flex items-center gap-5 relative">
       <p>{name}</p>
       {banner && (
         <div className="absolute -top-1 -right-3 font-sans h-4 w-4 text-sm text-black grid place-content-center bg-primary rounded-full">
@@ -89,6 +123,7 @@ function HeaderElement({ name, link, isAnchor, banner }: HeaderElementProps) {
   ) : (
     <NavLink
       to={link}
+      onClick={onClick}
       className={({ isActive }) =>
         `flex items-center gap-5 ${
           isActive ? "text-primary font-serif" : ""
