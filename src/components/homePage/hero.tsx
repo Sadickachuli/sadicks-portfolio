@@ -23,13 +23,21 @@ export default function HeroSection() {
 
   return (
     <article className="w-full h-[75vh] padd py-10 relative">
+      {/* Video for larger screens */}
       <video
         src="/hero.mp4"
         autoPlay
         loop
         muted
-        className="w-full h-full object-cover rounded-3xl bg-white"
+        className="w-full h-full object-cover rounded-3xl bg-white block md:hidden"
       />
+      {/* Static image for mobile devices */}
+      <img
+        src="/heroimg.png" 
+        alt="Hero section"
+        className="w-full h-full object-cover rounded-3xl bg-white hidden md:block"
+      />
+
       <article className="padd w-full absolute top-10 left-0 h-1/2">
         <section className="h-full w-full rounded-3xl flex">
           <div className="bg-black h-1/4 w-1/6 relative md:hidden">
@@ -57,9 +65,9 @@ export default function HeroSection() {
               />
               <p
                 ref={ref2}
-                className="w-fit py-2 bg-black font-bold text-5xl md:text-4xl sm:text-2xl whitespace-nowrap"
+                className="w-full py-2 bg-black font-bold text-5xl sm:text-2xl md:whitespace-nowrap"
               >
-                A Machine Learning/AI engineer and
+                A Machine Learning/AI engineer,
               </p>
             </div>
             <div className="w-fit py-2 px-10 bg-black font-bold text-5xl md:text-4xl sm:text-2xl relative rounded-br-3xl">
